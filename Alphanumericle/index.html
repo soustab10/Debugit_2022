@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Numericle</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script> -->
+    <script src="https://kit.fontawesome.com/444f75a2ad.js" crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
+
+</head>
+
+<body>
+
+
+
+
+    <div class="toggle-container">
+        <!-- <a href=""><i class="fa fa-solid fa-house-user" ></i></a> -->
+        <!-- <a href="#" data-toggle="dropdown"></a> -->
+        <div class="dropdown">
+            <button class="dropbtn"><i class="fa fa-solid fa-user fa-lg"></i></button>
+            <div class="dropdown-content">
+
+                <a href="index.html">Home</a>
+                <a href="../index.html">Logout</a>
+
+
+            </div>
+        </div>
+
+        <input type="checkbox" id="switch" name="theme" /><label id="toggle-switch theme-switcher" for="switch">Toggle</label>
+    </div>
+
+    <div class="game-container">
+        <div class="title-container">
+            <h1 class="gradient-text"><span id="header-span">AlphaNumericle</span>
+            </h1>
+            <button onClick="window.location.reload();" class="refresh-btn">Home</button>
+            <button data-modal-target="#modal" class="user-btn">How to Play</button>
+            <div class="modal" id="modal">
+                <div class="modal-header">
+                    <div class="title">How to Play</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    Welcome to AlphaNumericle! You have to guess a word/number of the length chosen by you.<br> Drag the slider to adjust the length of the word/number.
+                    <br>
+                    <div id="modal-notes"> NOTE:For each Game involving N characters you get N+1 tries.<br> Wordle only accepts valid dictionary words</div> <br> COLOR SPECIFIER::<br> Green:The character entered is at the correct position as the answer. <br> Yellow: The character
+                    entered is present in the answer but not at the given position. <br> Grey: The character entered is not present in the answer. <br> <br>A typical game would look like this: <br>
+                    <img src="sampleimg.png" alt="Sample Image"> <img src="sampleimg2.png" alt="Sample Image"><br> KEYS: <br> ENTER: To submit your guess. <br>
+                    <<: Backspace Key <br>
+                </div>
+            </div>
+
+            <div id="overlay"></div>
+            <div class="lvl-buttons">
+                <input type="button" id="caz-wordle-btn" class="raise" value="Casual Wordle" />
+                <input type="button" id="caz-num-btn" class="raise" value="Casual Numericle" />
+
+
+
+                <div id="number-slider">
+                    <form oninput="output.value = Math.round(range.valueAsNumber)">
+                        <h5>Choose Number of Characters</h5>
+                        <div class="range">
+                            <input name="range" type="range" id="range-slider" min="4" max="8">
+                            <div class="range-output">
+                                <output class="output" name="output" for="range">
+                            use slider to adjust
+                          </output>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- <input type="button" id="lvl-btn-easy" onclick="startEasyLevel()" value="Easy Level" />
+                <input type="button" id="lvl-btn-med" onclick="startMediumLevel()" value="Medium Level" />
+                <input type="button" id="lvl-btn-hard" onclick="startHardLevel()" value="Hard Level" /><br> -->
+                <input type="button" id="lvl-btn-easy" class="raise" value="START" />
+                <div class="emoji-container">&#128071 Play the NEW Tournament Modes NOW! &#128071 </div>
+                <input type="button" class="button-pulse raise" id="lvl-btn-tournament-2" onclick="window.location.href='../Wordle-Tournament/index.html'" value="Play Wordle Tournament" />
+                <input type="button" class="button-pulse raise" id="lvl-btn-tournament" onclick="window.location.href='../Numericle-Tournament/index.html'" value="Play Numericle Tournament" />
+                <div class="message-container"></div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="tile-container"></div>
+        <div class="key-container"></div>
+
+        <div class="attr">
+            Coded with &#129505 by Soustab Haldar
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
