@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Numericle</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="app.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/444f75a2ad.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="toggle-container">
+        <div class="dropdown">
+            <button class="dropbtn"><i class="fa fa-solid fa-user fa-lg"></i></button>
+            <div class="dropdown-content">
+
+                <a href="../Alphanumericle/index.html">Home</a>
+                <a href="../index.html">Logout</a>
+
+
+            </div>
+        </div>
+        <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
+    </div>
+
+    <div class="game-container">
+        <div class="title-container">
+            <h1>Wordle Tournament Mode</h1>
+
+
+
+
+
+            <button onClick="window.location.reload();" class="refresh-btn raise">New Game</button>
+            <input type="button" class="raise" id="btn-leaderboard-1" value="Leaderboard" />
+            <button data-modal-target="#modal" class="user-btn raise">How to Play</button>
+            <div class="modal" id="modal">
+                <div class="modal-header">
+                    <div class="title">How to Play</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    Welcome to WORDLE Tournament! Play three Levels and Climb up the Leaderboard <br> To start ENTER your name and click on 'Start Game'.
+                    <br>
+                    <div id="modal-notes"> NOTE:For each Game involving N letters you get N+1 tries.<br>You will have to pass three levels of Wordle with word lengths 5, 6 and 7.</div> <br> COLOR SPECIFIER::<br> Green:The character entered is at the correct position as the
+                    answer. <br> Yellow: The character entered is present in the answer but not at the given position. <br> Grey: The character entered is not present in the answer. <br> <br>A typical game would look like this: <br>
+                    <img src="sampleimg.png" alt="Sample Image"><br> KEYS: <br> ENTER: To submit your guess. <br>
+                    <<: Backspace Key <br> New Game: To start a new Game <br> Home: To Head to MAIN Page <br> Leaderboard: To fetch the Leaderboard
+                </div>
+            </div>
+
+            <div id="overlay"></div>
+            <div class="lvl-buttons">
+                <form class="form-todo">
+                    <input type="text" name="" id="name-form" placeholder="Enter your name" /><br>
+                    <button class="button-two lvl-btn-tournament"><span>Start Game</span></button>
+                    <!-- <input type="submit" value="Start Game" class="lvl-btn-tournament" /> -->
+                </form>
+
+
+                <div class="message-container"></div>
+                <div class="score-container">Score:
+                    <div id="score">0</div>
+                </div>
+
+
+                <button class="button-two" id="btn-leaderboard"><span>Show Leaderboard</span></button>
+                <button class="button-two" id="lvl-btn-start"><span>Start Level 2</span></button>
+                <button class="button-two" id="lvl-btn-start-2"><span>Start Level 3</span></button>
+                <!-- <input type="button" class="button-two" id="btn-leaderboard" value="Show Leaderboard" />
+                <input type="button" class="button-two" id="lvl-btn-start" value="Start Level 2" />
+                <input type="button" class="button-two" id="lvl-btn-start-2" value="Start Level 3" /> -->
+
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="tile-container"></div>
+        <div class="key-container"></div>
+        <div class="table-container">
+            <div id="dvTable"></div>
+        </div>
+        <div class="attr">
+            Coded with &#129505 by Soustab Haldar
+        </div>
+    </div>
+
+
+</body>
+
+</html>
